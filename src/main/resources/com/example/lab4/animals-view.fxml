@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox onKeyPressed="#onKeyPressed" prefHeight="600.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+
+    <children>
+        
+        <MenuBar style="-fx-background-color: #fc79fa;" VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem fx:id="startMenuItem" mnemonicParsing="false" text="Start" />
+                        <MenuItem fx:id="stopMenuItem" mnemonicParsing="false" text="Stop" />
+                        <MenuItem fx:id="loadObjectsMenuItem" mnemonicParsing="false" text="Load" />
+                        <MenuItem fx:id="saveObjectsMenuItem" mnemonicParsing="false" text="Save" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+            <ListView fx:id="clientsListView" prefHeight="351.0" prefWidth="168.0" />
+        <SplitPane dividerPositions="0.7556390977443609" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #fc79fa;">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Pane fx:id="pane" layoutX="-1.0" layoutY="-2.0" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #8d41f0;" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #fc79fa;">
+                    <children>
+                        <Button fx:id="startButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Start" />
+                        <Button fx:id="stopButton" layoutX="79.0" layoutY="14.0" mnemonicParsing="false" text="Stop" />
+                        <CheckBox fx:id="WolvesSpawnCheckBox" layoutX="14.0" layoutY="50.0" mnemonicParsing="false" selected="true" text="Wolkii" />
+                        <CheckBox fx:id="showInfoCheckBox" layoutX="13.0" layoutY="67.0" mnemonicParsing="false" text="showInfoCheckBox" />
+                        <RadioButton fx:id="showTimeRadio" layoutX="14.0" layoutY="83.0" mnemonicParsing="false" text="Show time" />
+                        <RadioButton fx:id="hideTimeRadio" layoutX="14.0" layoutY="107.0" mnemonicParsing="false" text="Hide time" />
+                        <TextField fx:id="LionsIntervalTextField" layoutX="13.0" layoutY="135.0" prefHeight="25.0" prefWidth="41.0" promptText="Lions spawn interval" text="3" />
+                        <TextField fx:id="WolvesIntervalTextField" layoutX="13.0" layoutY="169.0" prefHeight="25.0" prefWidth="41.0" promptText="Wolves spawn interval" text="3" />
+                        <Slider fx:id="LionsProbabilitySlider" layoutX="26.0" layoutY="224.0" majorTickUnit="20" min="10" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="90" />
+                        <Text layoutX="17.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lions spawn probability" />
+                        <Text layoutX="27.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wolves spawn Probability" />
+                        <Slider fx:id="WolvesProbabilitySlider" layoutX="26.0" layoutY="289.0" majorTickUnit="20" min="10" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="90" />
+                        <TextField fx:id="LionsLifeTimeTextField" layoutX="17.0" layoutY="368.0" prefHeight="25.0" prefWidth="73.0" text="30" />
+                        <TextField fx:id="WolvesLifeTimeTextField" layoutX="101.0" layoutY="368.0" prefHeight="25.0" prefWidth="73.0" text="20" />
+                        <Text layoutX="17.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lions life time" wrappingWidth="73.0" />
+                        <Text layoutX="101.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wolves life time" wrappingWidth="73.0" />
+                        <Button fx:id="currentObjectsButton" layoutX="14.0" layoutY="401.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="168.0" text="Current objects" />
+                        <CheckBox fx:id="LionsAICheckBox" layoutX="14.0" layoutY="435.0" mnemonicParsing="false" selected="true" text="Lions AI" />
+                        <CheckBox fx:id="WolvesAICheckBox" layoutX="101.0" layoutY="435.0" mnemonicParsing="false" selected="true" text="Wolves AI" />
+                  <ChoiceBox fx:id="wolvesPriorityChoiceBox" layoutX="119.0" layoutY="135.0" prefHeight="25.0" prefWidth="55.0" />
+                  <ComboBox fx:id="LionsPriorityComboBox" layoutX="121.0" layoutY="169.0" prefHeight="25.0" prefWidth="55.0" />
+                  <Label layoutX="65.0" layoutY="173.0" text="Wolves" />
+                  <Label layoutX="73.0" layoutY="139.0" text="Lions" />
+                        <Button fx:id="consoleButton" layoutX="154.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" text="/" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+
+    </children>
+</VBox>
